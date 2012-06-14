@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="AzureSpoUploader" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="1" osVersion="*">
+  <Role name="WebUploader">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="SharepointSiteUrl" value="https://{your site}.sharepoint.com/" />
+      <Setting name="SharepointUsername" value="{your user}" />
+      <Setting name="SharepointPassword" value="{your password}" />
+      <Setting name="SharepointLibrary" value="{your library}" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="admin" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEEV11tvbKTKcSnlzZaPFEKwwDQYJKoZIhvcNAQEBBQAEggEAbzDdrH4QkPSxtzuqt2/I8BEnFNHkMdA22OkDlFjI9Lmtb5fiDPjdVBzGXMOEjX2B8GsiBQGdv3/f0FwV99+UbKuMW2UtvFPb6EHxc38wRDpOYIjVfcRnTLLgVnLbF5lLzQMApILdXAgsVgh6uTA7eol2w8v9a/kktaOCVPjx3uyv6wR9Nc+PNWJu+YoMYdErfg0G4X83cYHxeLdTeXlR3L3NfTctMEZ1x1evRA/KgJHkAfNjndHegcEJ4y8pTsuZceT60HVhGJ/S9Km1Y51D9t6bVDwjLk0uqxsixi/fwLLNLenjoKOrRQ9TeuLCPEsgyiRICbEREY6bG5YucsZ95jAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECC13ixtDMAXhgBBiclETg9B97ITTckBcudWQ" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2013-05-31T23:59:59.0000000+01:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="BD0628194E9CBF6ABA25D9676FA857A9535DE74C" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

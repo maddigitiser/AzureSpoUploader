@@ -1,0 +1,1 @@
+C:\Users\Tom\Documents\Visual Studio 2010\Projects\AzureSpoSc\AzureSpoUploader\AzureSpoUploader\bin\Release\ServiceConfiguration.cscfg

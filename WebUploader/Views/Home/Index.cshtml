@@ -1,0 +1,28 @@
+@{
+    ViewBag.Title = "SharePoint Uploader";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            <p>
+                <form action="" method="post" enctype="multipart/form-data">
+                <input type="file" id="file" name="file" />
+                <button type="submit">
+                    Save</button>
+                </form>
+            </p>
+        </div>
+    </section>
+}
+<h3>Existing Documents:</h3>
+
+<ol>
+    @foreach (var file in ViewBag.fileNames)
+    {
+        <li>@file</li>
+    }
+</ol>
